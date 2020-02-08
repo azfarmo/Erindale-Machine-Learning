@@ -5,9 +5,11 @@ import json
 import requests
 app = Flask(__name__)
 
-
 @app.route('/')
 def home():
+    return render_template('home.html')
+@app.route('/demo')
+def demo():
     url = "https://ip-geolocation.whoisxmlapi.com/api/v1?apiKey=at_t8PI3edTMfOr9Q2JkJbok5B300gr8"
     response = requests.get(url) 
     x = response.json()
@@ -19,8 +21,5 @@ def home():
 @app.route('/works')
 def how_it_works():
     return render_template('works.html')
-@app.route('/maps')
-def maps():
-    return render_template('maps.html')
 if __name__ == "__main__":
     app.run(debug=True,port=10444)
