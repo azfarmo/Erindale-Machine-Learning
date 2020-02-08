@@ -11,17 +11,16 @@ def home():
     url = "https://ip-geolocation.whoisxmlapi.com/api/v1?apiKey=at_t8PI3edTMfOr9Q2JkJbok5B300gr8"
     response = requests.get(url) 
     x = response.json()
-    temp, humidity = get_weather_data('San Jose')
-    return render_template('index.html',x = int(predict(temp,humidity,x["location"]["lat"],x["location"]["lng"])))
+    temp, humidity = get_weather_data(x["location"]["lat"],x["location"]["lng"])
+    temp = (temp-273.15) * 9/5 + 32
+    return render_template('index.html',x = int(predict(temp,humidity,x["location"]["lat"],x["location"]["lng"])),noise=int(open('noise.txt','r').read()),tem = round(temp,2),hum = round(humidity,2),lat = x["location"]["lat"],long = x["location"]["lng"])
 
 
-@app.route('/location')
-def index():
-    url = "https://ip-geolocation.whoisxmlapi.com/api/v1?apiKey=at_t8PI3edTMfOr9Q2JkJbok5B300gr8"
-    response = requests.get(url) 
-    x = response.json()
-
-    return str(x["location"]["lat"]) + str(x["location"]["lng"])
-
+@app.route('/works')
+def how_it_works():
+    return render_template('works.html')
+@app.route('/maps')
+def maps():
+    return render_template('maps.html')
 if __name__ == "__main__":
     app.run(debug=True,port=10444)

@@ -1,9 +1,59 @@
 <html>
+    <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+</head>
     <body>
+        <div style="font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif; !important;padding-left:60px;">
         {% if x == 1%}
-        <h1>Great Weather</h1>
+        <h1>Great Day</h1>
         {% else %}
-        <h1>Bad Weather</h1>
+        <h1 style="text-align:center;">Not Such a Good Day</h1>
         {% endif %}
+        <h1 style="text-align:center;">
+            What is the cause?
+        </h1>
+        <br>
+        <h2 style="color:orange;">
+            Humidity = {{hum}}
+        </h2>
+        <h1 style='font-size:15px;'>
+            {% if  hum > 17.58 %}
+            The humidity is higher than average
+            {% else %}
+            The humidity is lower than average
+            {% endif%}
+        </h1>
+        <h2 style="color:red;">
+            Temperature = {{tem}}
+        </h2>
+        <h1 style='font-size:15px'>
+            {%if tem >19.76 %}
+            The temperature is higher than the average
+            {% else%}
+            The temperature is lower than the average 
+            {% endif%}
+        </h1>
+        <h2>
+            Noise Level = {{noise}}
+        </h2>
+        <h1 style='font-size:15px'>
+            {% if noise > 670.6984126984127 %}
+            The noise was higher than the average
+            {% else %}
+            The noise was lower than the average 
+            {% endif %}
+        </h1>
+        <h1 style="font-size:20px;padding-top:30px;">
+            Want to know how it <a href="{{url_for('how_it_works')}}">works</a>   </h1>
+        <h4 style="padding-top:85px">
+            Location Used
+        </h4>
+        <h6>
+            Lat = {{lat}}
+        </h6>
+        <h6>
+            Long = {{long}}
+        </h6>
+        </div>
     </body>
 </html>
