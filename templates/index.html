@@ -1,8 +1,5 @@
-<html>
-    <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-</head>
-    <body>
+{% extends 'layout.html' %}
+{% block content %}
         <div style="font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif; !important;padding-left:60px;">
         {% if x == 1%}
         <h1>Great Day</h1>
@@ -13,7 +10,7 @@
             What is the cause?
         </h1>
         <br>
-        <h2 style="color:orange;">
+        <h2 style=" color:orange;">
             Humidity = {{hum}}
         </h2>
         <h1 style='font-size:15px;'>
@@ -44,7 +41,7 @@
             {% endif %}
         </h1>
         <h1 style="font-size:20px;padding-top:30px;">
-            Want to know how it <a href="{{url_for('how_it_works')}}">works</a>   </h1>
+            Want to know how it <a href="{{url_for('how_it_works')}}" style="color:blue !important;text-decoration:none;">works</a>   </h1>
         <h4 style="padding-top:85px">
             Location Used
         </h4>
@@ -55,5 +52,4 @@
             Long = {{long}}
         </h6>
         </div>
-    </body>
-</html>
+{% endblock content %}

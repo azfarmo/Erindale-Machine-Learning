@@ -21,5 +21,11 @@ def demo():
 @app.route('/works')
 def how_it_works():
     return render_template('works.html')
+@app.route('/maps')
+def maps():
+    return render_template('maps.html')
+@app.route('/signal')
+def signal():
+    return render_template('signal.html')
 if __name__ == "__main__":
     app.run(debug=True,port=10444)

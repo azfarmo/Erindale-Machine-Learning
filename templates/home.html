@@ -1,11 +1,22 @@
+<!DOCTYPE html>
 <html>
-    <head></head>
-    <body>
-                <div style="font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif; !important;padding-left:60px;">
+<link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
+<body>
+<ul>
+    <li><a class="active" href="">Home</a></li>
+    <li><a href="{{url_for('demo')}}">Demo</a></li>
+    <li><a href="{{url_for('signal')}}">Signal Map</a></li>
+    <li><a href="{{url_for('maps')}}">Location Map</a></li>
+  </ul>
+<h1 class="centerstuff">
+    <img src="{{url_for('static',filename='grind.png')}}">
 
-        <h1 style="padding-left:30px">
-            Main Page
-        </h1>
-        </div>
-    </body>
+</h1>
+<h2 class="welcome">
+    
+    <button  class="buttonstyle" href="{{url_for('demo')}}">
+        <a href="{{url_for('demo')}}" class="textstyle">Get Started</a>
+    </button>
+</h2>
+</body>
 </html>
