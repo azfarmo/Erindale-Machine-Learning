@@ -30,7 +30,7 @@ def demo():
 
 @app.route('/works')
 def how_it_works():
-    return render_template('works.html')
+    return render_template('c')
 @app.route('/maps')
 def maps():
     return render_template('maps.html')
