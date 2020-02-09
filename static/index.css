@@ -109,7 +109,13 @@
   font-family: "Titillium Web";
 }
 
-.ui.button.readmore.container
+.readmore-div.container
+{
+  float: left;
+  padding-left: 15em;
+
+}
+.ui.button.readmore
 {
   margin-top: 1.5em;
   white-space: nowrap;
@@ -128,7 +134,7 @@
   width: auto;
   
 }
-.ui.button.readmore.container:hover
+.ui.button.readmore:hover
 {
   transform: scale(1.1);
 }
