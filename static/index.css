@@ -1,71 +1,19 @@
-/* ul {
-    list-style-type: none;
-    margin: 0 auto;
-    padding: 0;
-    overflow: hidden;
-    background-color: #046307;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif !important;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: #000000;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;;
-  }
-  
-  li a:hover {
-    background-color: wheat;
-  }
 
-  body{
-      background-color: #000000;
-  }
-
-  .welcome{
-      text-align: center;
-      align-items: center;
-      top: 400px;
-      position: absolute;
-      left: 37%;
-      border-radius: 20px 20px;
-  }
-body{
-    color:white !important;
-}
-  .buttonstyle{
-    width: 400px;
-    height: 75px;
-    border-radius: 20px 20px;
-    border: 0px;
-    background-color: #046307;
-  }
-
-  .centerstuff{
-    align-items: center;
-    text-align: center;
-  }
-
-  .textstyle{
-      color: wheat;
-      text-decoration: none;
-      font-size: large;
-      font-weight: bold;
-  } */
   .ui.secondary.pointing.menu
   {
     border-bottom: none;
   }
+  .ui.image.nav-image
+  {
+    max-width: 8em;
+    margin-left: 2em;
+    margin-top: 1em;
+    margin-bottom: auto;
+  }
 #home-main
 {
   background: linear-gradient(135deg,#2C2B30, #4F4F51);
-  /* background-color: "#4F4F51"; */
-  height: 100vh;
+  height: auto;
 }
 .ui.header.home-a
 {
@@ -90,7 +38,8 @@ body{
 }
 .home
 {
-  padding-top: 3em;
+  padding-top: 6em;
+  padding-bottom: 5em;
 }
 .column.home-right
 {
@@ -98,12 +47,13 @@ body{
 }
 .ui.button.demo
 {
+  margin-top: 1.5em;
   white-space: nowrap;
   z-index: 1;
   font-size: 1.5em;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #D6D6D6;
+  color: #666666;
   width: auto;
   padding: 15px 40px;
   background: linear-gradient(180deg,#F58F7C, #F2C4CE);
@@ -113,4 +63,47 @@ body{
   transition: all .3s ease;
   -webkit-transform: scale(1);
   transform: scale(1);
+}
+.ui.button.demo:hover{
+  transform: scale(1.1);
+}
+
+/*FooterCSS */
+#footer
+{
+    background-color:#222;
+    
+}
+.footermain
+{
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.location-icon
+{
+   display: inline-block;
+   color:white;
+   vertical-align: middle;
+   
+}
+.ui.header.header-content
+{
+    color:white;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "Titillium Web";
+}
+
+.footer-holder
+{
+    vertical-align: middle;
+    text-align:left;
+}
+.social-hold
+{
+    display: inline-block;
+}
+.link-email{
+    color:white;
 }

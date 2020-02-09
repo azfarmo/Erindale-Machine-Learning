@@ -1,18 +1,97 @@
 <!DOCTYPE html>
 <html>
-    <head>
-<link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-</head>
-<body>
-<ul>
-    <li><a class="active" href="{{url_for('home')}}">Home</a></li>
-    <li><a href="{{url_for('demo')}}">Demo</a></li>
-    <li><a href="{{url_for('signal')}}">Signal Map</a></li>
-    <li><a href="{{url_for('maps')}}">Location Map</a></li>
-  </ul>
-  {% block content%}
-  {% endblock content%}
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  <body>
+    <div class="ui secondary pointing menu">
+      <image
+        class="ui image nav-image"
+        src="{{url_for('static',filename='grind_1.png')}}"
+      ></image>
+      <div class="right menu">
+        <a class="item" href="{{url_for('home')}}">
+          Home
+        </a>
+        <a class="item" href="{{url_for('demo')}}">
+          Demo
+        </a>
+        <a class="item" href="{{url_for('signal')}}">
+          Signal Maps
+        </a>
+        <a href="{{url_for('maps')}}" class="ui item">
+          Location Maps
+        </a>
+      </div>
+    </div>
+    {% block content%} {% endblock content%}
+    <section id="footer">
+    <div class="footermain">
+    <div class="ui stackable three column grid container">
+      <div class="column">
+        <div class="footer-holder">
+          <div class="location-icon">
+            <i aria-hidden="true" class="point big icon"></i>
+          </div>
+          <div class="location-icon">
+            <div class="ui header header-content">
+              Stock Express<br />346 Clarksville Rd<br />Princeton Junction, NJ
+              08550
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="footer-holder">
+          <div class="ui header header-content">
+            Office: (917)498-4648 <br />Mail:
+            <a class="link-email" href="mailto:rohandeshpande832@gmail.com"
+              >rohandeshpande832@gmail.com</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="footer-holder">
+          <div class="ui header header-content">
+            © 2020 Grind Time. All Rights Reserved. Developed by Rohan
+            Deshpande, Azfar Mohamed and Aarav Solanki
+          </div>
+          <div class="social-hold">
+            <a
+              rel="noopener"
+              target="_blank"
+              href="https://www.linkedin.com/in/rohan-deshpande-994b23160/"
+              ><i aria-hidden="true" class="grey linkedin big icon"></i
+            ></a>
+          </div>
+          <div class="social-hold">
+            <a
+              rel="noopener"
+              target="_blank"
+              href="https://github.com/Rohan2002"
+              ><i aria-hidden="true" class="grey github big icon"></i
+            ></a>
+          </div>
+          <div class="social-hold">
+            <a
+              rel="noopener"
+              target="_blank"
+              href="mailto:rohandeshpande832@gmail.com"
+              ><i aria-hidden="true" class="grey mail big icon"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
   </body>
-  </html>
+</html>
