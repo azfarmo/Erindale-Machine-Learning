@@ -1,70 +1,197 @@
-{% extends 'layout.html' %}
-{% block content %}
-        <div style="font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif; !important;padding-left:60px;">
-        {% if x == 1%}
-        <h1>Great Day</h1>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans:+400,500,700|Product+Sans:400|Roboto+Mono:500"
+    media="all" rel="stylesheet" />
+</head>
+
+{% extends 'layout.html' %} {% block content %}
+
+<section id="demo1">
+  <div class="home">
+    <h1 class="ui header demo-a container">
+      Demo Grind Time
+    </h1>
+    {% if x == 1%}
+    <h1 class="ui header demo-b container">
+      Algorithm Result:
+      <span class="ui header demo-ml">Great Day to Study</span>
+    </h1>
+    {% else %}
+    <h1 class="ui header demo-b container">
+      Algorithm Result: <span class="ui header demo-ml">Not a Great Day</span>
+    </h1>
+    {% endif %}
+    <h1 class="ui header demo-c container">
+      Grind Time makes decisions based on machine learning algorithms using
+      parameters such as Temperature, Humidity, and Wifi Signal.
+    </h1>
+    <div class="readmore-div">
+      <button href="{{url_for('how_it_works')}}" class="ui button readmore container">
+        Read More
+      </button>
+    </div>
+  </div>
+</section>
+<section id="demo2">
+
+  <div class="demo-main">
+    <div class="ui stackable two column grid container">
+      <div class="column">
+        <h1 class="ui header demo-a container">
+          Humidity Parameter
+        </h1>
+        {% if hum > 17.58 %}
+        <h1 class="ui header demo-b-2 container">
+          Algorithm Result:
+          <span class="ui header demo-ml">The humidity is higher than average</span>
+        </h1>
         {% else %}
-        <h1 style="text-align:center;">Not Such a Good Day</h1>
+        <h1 class="ui header demo-b-2 container">
+          Algorithm Result: <span class="ui header demo-ml">The humidity is lower than average</span>
+        </h1>
         {% endif %}
-        <h1 style="text-align:center;">
-            What is the cause?
-        </h1>
-        <br>
-        <h2 style="color:orange;">
-            Humidity = {{hum}}
+        <h2 class="ui header demo-c container">
+          Based on your current location, the humidity is {{hum}}%
         </h2>
-        <h1 style='font-size:15px;'>
-            {% if  hum > 17.58 %}
-            The humidity is higher than average
-            {% else %}
-            The humidity is lower than average
-            {% endif%}
-        </h1>
-        <div class="chart" id="gg">
-</div>
-        <h2 style="color:red;">
-            Temperature = {{tem}}
-        </h2>
-        <h1 style='font-size:15px'>
-            {%if tem >19.76 %}
-            The temperature is higher than the average
-            {% else%}
-            The temperature is lower than the average 
-            {% endif%}
-        </h1>
-        <div class="chart" id="no">
-</div>
-        <h2>
-            Noise Level = {{noise}}
-        </h2>
-        <h1 style='font-size:15px'>
-            {% if noise > 670.6984126984127 %}
-            The noise is higher than the average
-            {% else %}
-            The noise is lower than the average 
-            {% endif %}
-        </h1>
-        <div class="chart" id="bargraph">
-</div>
-        <h1 style="font-size:20px;padding-top:30px;">
-            Want to know how it <a href="{{url_for('how_it_works')}}" style="color:blue !important;text-decoration:none;">works</a>   </h1>
-        <h4 style="padding-top:85px">
-            Location Used
-        </h4>
-        <h6>
-            Lat = {{lat}}
-        </h6>
-        <h6>
-            Long = {{long}}
-        </h6>
+      </div>
+      <div class="column">
+        <div class="chart" id="gg"></div>
+      </div>
+
+    </div>
+</section>
+<section id="demo3">
+
+  <div class="demo-main">
+    <div class="ui stackable two column grid container">
+      <div class="column">
+        <div class="chart container" id="no">
         </div>
-    <script>
-        var graphs = {{graph_noise | safe}};
-        Plotly.plot('bargraph',graphs,{});
-        var graphs = {{graph_humidity | safe}};
-        Plotly.plot('gg',graphs,{});
-        var g = {{graph_temp | safe}};
-        Plotly.plot('no',g,{});
-    
-    </script>
+      </div>
+      <div class="column">
+        <h1 class="ui header demo-a container">
+          Temperature Parameter
+        </h1>
+        {%if tem >19.76 %}
+        <h1 class="ui header demo-b-2 container">
+          Algorithm Result:
+          <span class="ui header demo-ml">The temperature is higher than the average</span>
+        </h1>
+        {% else %}
+        <h1 class="ui header demo-b-2 container">
+          Algorithm Result: <span class="ui header demo-ml">The temperature is lower than the average</span>
+        </h1>
+        {% endif %}
+        <h2 class="ui header demo-c container">
+          Based on your current location, the temperature is {{tem}} °F
+        </h2>
+      </div>
+    </div>
+
+
+</section>
+<section id="demo4">
+
+  <div class="demo-main">
+    <div class="ui stackable two column grid container">
+      <div class="column">
+        <h1 class="ui header demo-a container">
+          Noise Parameter
+        </h1>
+        {%if tem >670.6984126984127 %}
+        <h1 class="ui header demo-b-2 container">
+          Algorithm Result:
+          <span class="ui header demo-ml">The Noise Level is higher than the average</span>
+        </h1>
+        {% else %}
+        <h1 class="ui header demo-b-2 container">
+          Algorithm Result: <span class="ui header demo-ml">The Noise Level is lower than the average</span>
+        </h1>
+        {% endif %}
+        <h2 class="ui header demo-c container">
+          Based on your current location, the Noise Level is {{tem}} Decibels
+        </h2>
+      </div>
+      <div class="column">
+        <div class="chart" id="bargraph">
+        </div>
+      </div>
+    </div>
+</section>
+
+<script>
+
+  var graphs = {{ graph_noise | safe}};
+  Plotly.plot('bargraph', graphs, {});
+  var graphs = {{ graph_humidity | safe}};
+  Plotly.plot('gg', graphs, {});
+  var g = {{ graph_temp | safe}};
+  Plotly.plot('no', g, {});
+
+</script>
+
 {% endblock content %}
+
+<!-- =<div style="font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif; !important;padding-left:60px;">
+    {% if x == 1%}
+    <h1>Great Day</h1>
+    {% else %}
+    <h1 style="text-align:center;">Not Such a Good Day</h1>
+    {% endif %}
+    <h1 style="text-align:center;">
+        What is the cause?
+    </h1>
+    <br>
+    <h2 style="color:orange;">
+        Humidity = {{hum}}
+    </h2>
+    <h1 style='font-size:15px;'>
+        {% if  hum > 17.58 %}
+        The humidity is higher than average
+        {% else %}
+        The humidity is lower than average
+        {% endif%}
+    </h1>
+    <div class="chart" id="gg">
+</div>
+    <h2 style="color:red;">
+        Temperature = {{tem}}
+    </h2>
+    <h1 style='font-size:15px'>
+        {%if tem >19.76 %}
+        The temperature is higher than the average
+        {% else%}
+        The temperature is lower than the average 
+        {% endif%}
+    </h1>
+    <div class="chart" id="no">
+</div>
+    <h2>
+        Noise Level = {{noise}}
+    </h2>
+    <h1 style='font-size:15px'>
+        {% if noise > 670.6984126984127 %}
+        The noise is higher than the average
+        {% else %}
+        The noise is lower than the average 
+        {% endif %}
+    </h1>
+    <div class="chart" id="bargraph">
+</div>
+    <h1 style="font-size:20px;padding-top:30px;">
+        Want to know how it <a href="{{url_for('how_it_works')}}" style="color:blue !important;text-decoration:none;">works</a>   </h1>
+    <h4 style="padding-top:85px">
+        Location Used
+    </h4>
+    <h6>
+        Lat = {{lat}}
+    </h6>
+    <h6>
+        Long = {{long}}
+    </h6>
+    </div>
+  -->

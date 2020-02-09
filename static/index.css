@@ -1,4 +1,4 @@
-
+/*Home CSS*************************************** idk why did i do everthing in one css file lol */
   .ui.secondary.pointing.menu
   {
     border-bottom: none;
@@ -68,7 +68,103 @@
   transform: scale(1.1);
 }
 
-/*FooterCSS */
+/* Demo CSS*************************************** */
+
+
+
+.ui.header.demo-a.container
+{
+  margin-top: 3em;
+  color:#D6D6D6;
+  font-size: 2em;
+  letter-spacing: 2px;
+  font-family: "Titillium Web";
+}
+.ui.header.demo-b.container
+{
+  color:#D6D6D6;
+  font-size: 4em;
+  letter-spacing: 2px;
+  font-family: "Titillium Web";
+}
+
+.ui.header.demo-c.container
+{
+  color:#D6D6D6;
+  font-size: 20px;
+  font-family: "Titillium Web";
+}
+
+.ui.header.demo-ml
+{
+  color:goldenrod;
+  font-size:1em;
+}
+
+.ui.header.demo-b-2.container
+{
+  color:#D6D6D6;
+  font-size: 3em;
+  letter-spacing: 2px;
+  font-family: "Titillium Web";
+}
+
+.ui.button.readmore.container
+{
+  margin-top: 1.5em;
+  white-space: nowrap;
+  z-index: 1;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666666;
+  background: linear-gradient(180deg,#F58F7C, #F2C4CE);
+  border-radius: 15px;
+  font-family: "Titillium Web";
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  width: auto;
+  
+}
+.ui.button.readmore.container:hover
+{
+  transform: scale(1.1);
+}
+#demo1
+{
+  background:#222;
+  color:#D6D6D6;
+  height:100vh;
+}
+#demo2
+{
+  background:linear-gradient(135deg,#2C2B30, #4F4F51);
+  color:#D6D6D6;
+  height:100vh;
+  padding-top: 3em;
+}
+.demo-main
+{
+  padding-top: 3em;
+  padding-bottom:3em;
+}
+#demo3
+{
+  background:#222;
+  color:#D6D6D6;
+  height:100vh;
+  padding-top: 3em;
+}
+#demo4
+{
+  background:linear-gradient(135deg,#2C2B30, #4F4F51);
+  color:#D6D6D6;
+  height:100vh;
+  padding-top: 3em;
+}
+/*FooterCSS*************************************** */
 #footer
 {
     background-color:#222;
