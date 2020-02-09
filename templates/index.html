@@ -20,6 +20,8 @@
             The humidity is lower than average
             {% endif%}
         </h1>
+        <div class="chart" id="gg">
+</div>
         <h2 style="color:red;">
             Temperature = {{tem}}
         </h2>
@@ -30,6 +32,8 @@
             The temperature is lower than the average 
             {% endif%}
         </h1>
+        <div class="chart" id="no">
+</div>
         <h2>
             Noise Level = {{noise}}
         </h2>
@@ -40,6 +44,8 @@
             The noise is lower than the average 
             {% endif %}
         </h1>
+        <div class="chart" id="bargraph">
+</div>
         <h1 style="font-size:20px;padding-top:30px;">
             Want to know how it <a href="{{url_for('how_it_works')}}" style="color:blue !important;text-decoration:none;">works</a>   </h1>
         <h4 style="padding-top:85px">
@@ -52,4 +58,13 @@
             Long = {{long}}
         </h6>
         </div>
+    <script>
+        var graphs = {{graph_noise | safe}};
+        Plotly.plot('bargraph',graphs,{});
+        var graphs = {{graph_humidity | safe}};
+        Plotly.plot('gg',graphs,{});
+        var g = {{graph_temp | safe}};
+        Plotly.plot('no',g,{});
+    
+    </script>
 {% endblock content %}
