@@ -1,4 +1,4 @@
-ul {
+/* ul {
     list-style-type: none;
     margin: 0 auto;
     padding: 0;
@@ -56,4 +56,36 @@ body{
       text-decoration: none;
       font-size: large;
       font-weight: bold;
-  }
+  } */
+
+#home-main
+{
+  background: linear-gradient(135deg,#2C2B30, #4F4F51);
+  /* background-color: "#4F4F51"; */
+  height: 100vh;
+}
+.ui.header.container.home-a
+{
+  color:#D6D6D6;
+  font-size: 2em;
+  letter-spacing: 2px;
+  font-family: "Titillium Web";
+}
+.ui.header.container.home-b
+{
+  color:#D6D6D6;
+  font-size: 4em;
+  letter-spacing: 2px;
+  font-family: "Titillium Web";
+}
+.ui.header.container.home-c
+{
+  color:#D6D6D6;
+  font-size: 4em;
+  letter-spacing: 2px;
+  font-family: "Titillium Web";
+}
+.home
+{
+  padding-top: 3em;
+}

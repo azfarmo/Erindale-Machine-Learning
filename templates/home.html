@@ -1,22 +1,27 @@
-<!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
-<body>
-<ul>
-    <li><a class="active" href="">Home</a></li>
-    <li><a href="{{url_for('demo')}}">Demo</a></li>
-    <li><a href="{{url_for('signal')}}">Signal Map</a></li>
-    <li><a href="{{url_for('maps')}}">Location Map</a></li>
-  </ul>
-<h1 class="centerstuff">
-    <img src="{{url_for('static',filename='grind.png')}}">
-
-</h1>
-<h2 class="welcome">
-    
-    <button  class="buttonstyle" href="{{url_for('demo')}}">
-        <a href="{{url_for('demo')}}" class="textstyle">Get Started</a>
-    </button>
-</h2>
-</body>
-</html>
+<head>
+  <link
+    href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css?family=Google+Sans:+400,500,700|Product+Sans:400|Roboto+Mono:500"
+    media="all"
+    rel="stylesheet"
+  />
+</head>
+{% extends 'layout.html' %} {% block content %}
+<section id="home-main">
+  <div class="home">
+    <h3 class="ui header container home-a">Team Meta</h1>
+    <h1 class="ui header container home-b">Grind Time</h1>
+    <h1 class="ui header container home-c">App that finds the best possible locations to study</h1>
+  </div>
+</section>
+{% endblock content %}
