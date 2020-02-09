@@ -57,35 +57,60 @@ body{
       font-size: large;
       font-weight: bold;
   } */
-
+  .ui.secondary.pointing.menu
+  {
+    border-bottom: none;
+  }
 #home-main
 {
   background: linear-gradient(135deg,#2C2B30, #4F4F51);
   /* background-color: "#4F4F51"; */
   height: 100vh;
 }
-.ui.header.container.home-a
+.ui.header.home-a
 {
   color:#D6D6D6;
   font-size: 2em;
   letter-spacing: 2px;
   font-family: "Titillium Web";
 }
-.ui.header.container.home-b
+.ui.header.home-b
 {
   color:#D6D6D6;
   font-size: 4em;
   letter-spacing: 2px;
   font-family: "Titillium Web";
 }
-.ui.header.container.home-c
+.ui.header.home-c
 {
   color:#D6D6D6;
-  font-size: 4em;
-  letter-spacing: 2px;
+  font-size: 1.5em;
+  letter-spacing: 1px;
   font-family: "Titillium Web";
 }
 .home
 {
   padding-top: 3em;
+}
+.column.home-right
+{
+  margin-top: 3em;
+}
+.ui.button.demo
+{
+  white-space: nowrap;
+  z-index: 1;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #D6D6D6;
+  width: auto;
+  padding: 15px 40px;
+  background: linear-gradient(180deg,#F58F7C, #F2C4CE);
+  border-radius: 15px;
+  font-family: "Titillium Web";
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }

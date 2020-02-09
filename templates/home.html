@@ -19,9 +19,20 @@
 {% extends 'layout.html' %} {% block content %}
 <section id="home-main">
   <div class="home">
-    <h3 class="ui header container home-a">Team Meta</h1>
-    <h1 class="ui header container home-b">Grind Time</h1>
-    <h1 class="ui header container home-c">App that finds the best possible locations to study</h1>
+    <div class="ui stackable two column grid container">
+      <div class="column">
+        <img class="ui image" src="{{url_for('static',filename='grind.png')}}">
+
+      </div>
+      <div class="column home-right">
+        <h3 class="ui header home-a">Team Meta</h1>
+          <h1 class="ui header home-b">Grind Time</h1>
+          <h1 class="ui header home-c">App that finds the best possible locations to study</h1>
+          <button class="ui button demo">Show Demo</button>
+        </div>
+
+    </div>
+    
   </div>
 </section>
 {% endblock content %}
