@@ -2,7 +2,6 @@ from flask import Flask,render_template, jsonify, request
 from weather import get_weather_data
 from model import predict
 import plotly.express as px
-import json
 import plotly
 import pandas as pd
 import json
