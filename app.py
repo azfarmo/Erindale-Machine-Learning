@@ -1,4 +1,4 @@
-from flask import Flask,render_template, jsonify
+from flask import Flask,render_template
 from weather import get_weather_data
 from model import predict
 import plotly.express as px
