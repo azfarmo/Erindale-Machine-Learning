@@ -1,4 +1,5 @@
 certifi==2018.1.18
+requests
 chardet==3.0.4
 Click==7.0
 Flask==1.1.1
