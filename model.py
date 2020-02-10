@@ -1,5 +1,4 @@
 import pickle
-import sys
 import numpy as np
 noise_level = float(open('noise.txt','r').read())
 model = pickle.load(open('finalized_model.sav', 'rb'))
