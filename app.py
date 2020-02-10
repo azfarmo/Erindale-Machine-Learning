@@ -5,7 +5,6 @@ import plotly.express as px
 import plotly
 import pandas as pd
 import json
-import requests
 app = Flask(__name__)
 
 @app.route('/')
