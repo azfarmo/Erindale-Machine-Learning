@@ -4,7 +4,6 @@
 
 # import required modules 
 import requests 
-import sys
 def get_weather_data(lat,long):
     api_key = ""
     url = "https://api.openweathermap.org/data/2.5/weather?appid=d7049abea5754572b7c3894db82e56e7&lat={}&lon={}".format(lat,long)
