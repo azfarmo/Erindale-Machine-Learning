@@ -3,7 +3,7 @@
 # using openweathermap api 
 
 # import required modules 
-import requests, json 
+import requests 
 import sys
 def get_weather_data(lat,long):
     api_key = ""
