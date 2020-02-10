@@ -35,5 +35,3 @@ def maps():
 @app.route('/signal')
 def signal():
     return render_template('signal.html')
-if __name__ == "__main__":
-    app.run(debug=True,port=3007)
